@@ -25,4 +25,4 @@ def person_pk(request, pk):
     else:
         person_p = get_object_or_404(Person, pk=pk)
         form = AddPersonForm(instance=person_p)
-        return render(request, 'person.html', {'form': form})
+    return render(request, 'person.html', {'form': form})
