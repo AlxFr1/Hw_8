@@ -15,7 +15,7 @@ class Product(models.Model):
         return f'{self.name}'
 
 
-class Client(models.Model):
+class Customer(models.Model):
     product = models.ManyToManyField(Product)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
 
@@ -23,7 +23,7 @@ class Client(models.Model):
         return f'{self.id}'
 
 
-class Seller(models.Model):
+class Supplier(models.Model):
     city = models.OneToOneField(City, on_delete=models.CASCADE)
 
     def __str__(self):
