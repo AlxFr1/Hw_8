@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from hw_8_1.models import LogRequest
 
 
